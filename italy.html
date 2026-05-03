@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italy Escape | Holidae</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Holidae</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1015/2000/1200') center/cover;">
+        <div class="hero-content">
+            <h1>Italy Escape</h1>
+            <p>7 nights in Rome &amp; Florence • From £699</p>
+            <button onclick="showBookingModal()" class="btn">Book Now</button>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Why Italy?</h2>
+        <p style="max-width: 800px; margin: 0 auto 3rem; text-align:center; font-size:1.1rem;">
+            Experience the best of Italy with this hand-crafted 7-night package. 
+            Visit the Colosseum, enjoy authentic pasta in Florence, and relax in the Tuscan countryside.
+        </p>
+       <!-- Video  -->
+<div style="max-width: 900px; margin: 3rem auto; text-align:center;">
+    <h3>Discover Italy in 4K</h3>
+    <p style="margin-bottom: 1rem; color: #555;">Experience the beauty of Rome, Florence, Tuscany and more</p>
+    
+    <iframe width="100%" height="500" 
+            src="https://www.youtube.com/embed/zS4AP0Q8L8g" 
+            title="Top 10 Places To Visit In Italy - 4K Travel Guide"
+            frameborder="0" 
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+</div>
+
+        <h2>Gallery</h2>
+        <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card"><img src="https://picsum.photos/id/1015/800/600" alt="Colosseum"></div>
+            <div class="card"><img src="https://picsum.photos/id/133/800/600" alt="Florence"></div>
+            <div class="card"><img src="https://picsum.photos/id/1016/800/600" alt="Tuscany"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Holidae  Web Development Project  Only Intended for Bath Spa Use</p>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center;">
+        <div style="background:white; padding:2rem; border-radius:15px; max-width:500px; width:90%;">
+            <h2>Book Italy Escape</h2>
+            <form id="bookingForm">
+                <label>Date of travel:</label><br>
+                <input type="date" id="travelDate" required><br><br>
+                <label>Number of travellers:</label><br>
+                <input type="number" id="travellers" value="2" min="1" required><br><br>
+                <button type="submit" class="btn" style="width:100%;">Confirm Booking</button>
+            </form>
+            <button onclick="hideBookingModal()" style="margin-top:1rem;">Close</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
